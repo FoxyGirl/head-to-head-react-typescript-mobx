@@ -1,11 +1,15 @@
 import * as React from 'react';
 
-const Home = () => {
+interface HomeProps {
+  title: string;
+}
+
+const Home = ({ title }: HomeProps) => {
   return (
     <div>
       <div className="main-header">
         <div className="feature feature-main">
-          <h1>Head To Head</h1>
+          <h1>{title}</h1>
           <p>
             Keep track of all the <em>important battles</em> in your
             life. eg. <strong>FIFA games on Playstation</strong> or

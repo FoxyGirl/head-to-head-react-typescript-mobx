@@ -11,7 +11,7 @@ $awayTeamColor: #00529f;
 $screen-md-min: 400px; // to fix
 
 body {
-  padding-top: 70px;
+  // padding-top: 70px;
 }
 .navbar-inverse {
   background-color: $darkblue;
@@ -66,19 +66,23 @@ h3,
       padding-top: 20px;
       margin-top: 0;
       padding-bottom: 270px;
-      background: url('../images/img_hero-main-small.jpg') no-repeat bottom center;
+      background: url('../images/img_hero-main-small.jpg') no-repeat
+        bottom center;
       background-size: auto 250px;
     }
     &.feature-firebase {
-      background: url('../images/img_hero-firebase.jpg') no-repeat top center;
+      background: url('../images/img_hero-firebase.jpg') no-repeat top
+        center;
       background-size: auto 250px;
     }
     &.feature-hth {
-      background: url('../images/img_hero-head-to-heads.jpg') no-repeat top center;
+      background: url('../images/img_hero-head-to-heads.jpg')
+        no-repeat top center;
       background-size: auto 250px;
     }
     &.feature-admin {
-      background: url('../images/img_hero-admin.jpg') no-repeat top center;
+      background: url('../images/img_hero-admin.jpg') no-repeat top
+        center;
       background-size: auto 250px;
     }
     &.feature-quote {
@@ -96,7 +100,8 @@ h3,
         width: 80%;
         margin: 0 auto 50px auto;
         float: none;
-        background: url('../images/img_hero-main.jpg') no-repeat bottom center;
+        background: url('../images/img_hero-main.jpg') no-repeat
+          bottom center;
         background-size: 100% auto;
         p {
           font-size: 20px;
