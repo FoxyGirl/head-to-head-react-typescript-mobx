@@ -1,6 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Provider } from 'mobx-react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import App from './js/App';
 import './scss/app.scss';
 import * as serviceWorker from './serviceWorker';
@@ -14,7 +15,9 @@ const stores = {
 
 ReactDOM.render(
   <Provider {...stores}>
-    <App viewStore={viewStore} />
+    <Router>
+      <App viewStore={viewStore} />
+    </Router>
   </Provider>,
   document.getElementById('root'),
 );
