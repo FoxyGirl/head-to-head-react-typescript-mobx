@@ -4,6 +4,7 @@ import { Provider } from 'mobx-react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import App from './js/App';
 import './scss/app.scss';
+import 'bootstrap/dist/js/bootstrap.min.js';
 import * as serviceWorker from './serviceWorker';
 
 import ViewStore from './js/stores/ViewStore';
