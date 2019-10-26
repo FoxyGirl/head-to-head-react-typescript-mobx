@@ -1,4 +1,4 @@
-@import '~bootstrap/scss/bootstrap.scss';
+@import 'bootstrap/scss/bootstrap.scss';
 @import './resources.scss'; // bring in Bootstrap variables
 @import './components/loader.scss';
 
@@ -11,7 +11,7 @@ $awayTeamColor: #00529f;
 $screen-md-min: 992px; // to fix
 
 body {
-  // padding-top: 70px;
+  padding-top: 70px;
 }
 .navbar-inverse {
   background-color: $darkblue;

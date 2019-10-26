@@ -3,40 +3,41 @@ import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   return (
-    <nav className="navbar navbar-inverse navbar-fixed-top">
+    <nav className="navbar navbar-dark navbar-inverse navbar-expand-sm fixed-top">
       <div className="container">
-        <div className="navbar-header">
-          <button
-            type="button"
-            className="navbar-toggle collapsed"
-            data-toggle="collapse"
-            data-target="#bs-example-navbar-collapse-1"
-            aria-expanded="false"
-          >
-            <span className="sr-only">Toggle navigation</span>
-            <span className="icon-bar"></span>
-            <span className="icon-bar"></span>
-            <span className="icon-bar"></span>
-          </button>
-          <Link className="navbar-brand" to="/">
-            Head To Head
-          </Link>
-        </div>
+        <Link className="navbar-brand" to="/">
+          Head To Head
+        </Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1"
+          aria-controls="bs-example-navbar-collapse-1"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
         <div
-          className="collapse navbar-collapse"
+          className="collapse navbar-collapse "
           id="bs-example-navbar-collapse-1"
         >
-          <ul className="nav navbar-nav navbar-left">
-            <li>
-              <Link to="/admin">Admin</Link>
+          <ul className="navbar-nav ml-auto mt-2 mt-lg-0 ">
+            <li className="nav-item active">
+              <Link to="/admin" className="nav-link">
+                Admin
+              </Link>
             </li>
-          </ul>
-          <ul className="nav navbar-nav navbar-right">
-            <li>
-              <Link to="/login">Sign in</Link>
+            <li className="nav-item">
+              <Link to="/login" className="nav-link">
+                Sign in
+              </Link>
             </li>
-            <li>
-              <Link to="/">Logout</Link>
+            <li className="nav-item">
+              <Link to="/" className="nav-link">
+                Logout
+              </Link>
             </li>
           </ul>
         </div>
