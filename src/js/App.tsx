@@ -18,7 +18,7 @@ class App extends React.Component<AppProps, AppState> {
     super(props);
   }
   render() {
-    const { title } = this.props.viewStore;
+    const { viewStore } = this.props;
 
     return (
       <div>
@@ -34,7 +34,17 @@ class App extends React.Component<AppProps, AppState> {
                   <Switch>
                     <Route exact path="/" component={Home} />
                     <Route path="/all" component={All} />
-                    <Route path="/login" component={Login} />
+                    {/* <Route path="/login" component={Login} /> */}
+                    <Route
+                      path="/login"
+                      render={routeProps => (
+                        <Login
+                          {...routeProps}
+                          viewStore={viewStore}
+                        />
+                      )}
+                    />
+
                     <Route path="/admin" component={Admin} />
                   </Switch>
                 </div>
