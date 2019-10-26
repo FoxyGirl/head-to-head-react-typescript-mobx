@@ -3,7 +3,6 @@ import { Route, Switch } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 import Login from './components/Login';
-import HeadToHeadDetails from './components/HeadToHeadDetails';
 import All from './components/All';
 import Admin from './components/admin/Admin';
 import ViewStore from './stores/ViewStore';
