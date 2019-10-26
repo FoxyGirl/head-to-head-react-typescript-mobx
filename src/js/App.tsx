@@ -38,12 +38,6 @@ class App extends React.Component<AppProps, AppState> {
                     <Route path="/login" component={Login} />
                     <Route path="/admin" component={Admin} />
                   </Switch>
-
-                  <Home title={title} />
-                  <Login />
-                  <HeadToHeadDetails />
-                  <All />
-                  <Admin />
                 </div>
                 {/* Main content - end */}
               </div>
