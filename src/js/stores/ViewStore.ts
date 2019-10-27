@@ -3,7 +3,7 @@ import { observable } from 'mobx';
 
 class ViewStore {
   @observable authed: boolean = false;
-  @observable isLoading: boolean = false;
+  @observable isLoading: boolean = true;
   @observable user: any = null;
   @observable errorMessage: string = '';
 
@@ -23,6 +23,10 @@ class ViewStore {
 
   logError = (errorMessage: string): void => {
     this.errorMessage = errorMessage;
+  };
+
+  addPlayer = (playerName: string): void => {
+    console.log('addPlayer', playerName);
   };
 }
 
