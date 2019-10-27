@@ -24,7 +24,6 @@ class App extends React.Component<AppProps, AppState> {
 
     return (
       <div className={`${isLoading ? 'is-loading' : ''}`}>
-        {/* NavBar - do I need to include the ending tag? :) */}
         {isLoading ? (
           <Loader />
         ) : (
