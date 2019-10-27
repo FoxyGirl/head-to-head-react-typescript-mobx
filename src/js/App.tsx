@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Route, Switch } from 'react-router-dom';
+import { observer } from 'mobx-react';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 import Login from './components/Login/Login';
@@ -14,10 +15,17 @@ interface AppProps {
 
 interface AppState {}
 
+@observer
 class App extends React.Component<AppProps, AppState> {
   constructor(props: AppProps) {
     super(props);
   }
+
+  componentDidMount() {
+    const { viewStore } = this.props;
+    viewStore.firebaseCheckAuth();
+  }
+
   render() {
     const { viewStore } = this.props;
     const { isLoading } = viewStore;
