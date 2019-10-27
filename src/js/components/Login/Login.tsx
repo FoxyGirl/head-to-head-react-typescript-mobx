@@ -41,7 +41,6 @@ class Login extends React.Component<LoginProps, any> {
           <form
             id="loginform"
             className="form"
-            role="form"
             onSubmit={this.handleSubmit}
           >
             {errorMessage !== '' && (

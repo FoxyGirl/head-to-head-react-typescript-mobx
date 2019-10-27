@@ -10,8 +10,8 @@ class All extends React.Component<any, any> {
             No Head To Heads found
           </div>
           <div className="card-body">
-            Create at least two <a href="#">Players</a> and one{' '}
-            <a href="#">Head To Head</a>.
+            Create at least two <a href="/">Players</a> and one{' '}
+            <a href="/">Head To Head</a>.
           </div>
         </div>
       </div>
