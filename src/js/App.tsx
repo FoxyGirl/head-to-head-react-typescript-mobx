@@ -28,7 +28,7 @@ class App extends React.Component<AppProps, AppState> {
           <Loader />
         ) : (
           <div>
-            <NavBar />
+            <NavBar viewStore={viewStore} />
 
             <div className="container-fluid">
               <div className="row">

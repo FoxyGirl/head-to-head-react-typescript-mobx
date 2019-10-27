@@ -2,9 +2,9 @@ import { firebaseAuth } from './../utils/firebase';
 import { observable } from 'mobx';
 
 class ViewStore {
-  authed: boolean = false;
-  isLoading: boolean = false;
-  user: any = null;
+  @observable authed: boolean = false;
+  @observable isLoading: boolean = false;
+  @observable user: any = null;
   @observable errorMessage: string = '';
 
   firebaseCheckAuth = () => {
@@ -14,7 +14,7 @@ class ViewStore {
         this.isLoading = false;
         this.user = user;
       } else {
-        this.authed = true;
+        this.authed = false;
         this.isLoading = false;
         this.user = null;
       }
