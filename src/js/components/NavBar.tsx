@@ -8,7 +8,7 @@ interface NavBarProps {
   viewStore: ViewStore;
 }
 
-const NavBar = observer((props: NavBarProps) => {
+const NavBar = (props: NavBarProps) => {
   const { authed } = props.viewStore;
   console.log('NavBar authed = ', authed);
 
@@ -63,6 +63,6 @@ const NavBar = observer((props: NavBarProps) => {
       </div>
     </nav>
   );
-});
+};
 
-export default NavBar;
+export default observer(NavBar);

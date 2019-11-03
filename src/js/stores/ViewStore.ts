@@ -1,11 +1,30 @@
 import { firebaseAuth, playersRef } from './../utils/firebase';
 import { observable } from 'mobx';
+import { Player } from '../models';
 
 class ViewStore {
   @observable authed: boolean = false;
   @observable isLoading: boolean = true;
   @observable user: any = null;
   @observable errorMessage: string = '';
+  @observable players: Player[] = [];
+
+  constructor() {
+    this.fetchPlayers();
+  }
+
+  fetchPlayers = () => {
+    playersRef.on('value', (snapshot: any) => {
+      let players: Player[] = [];
+      snapshot.forEach((childSnapshot: any) => {
+        const player = childSnapshot.val();
+        player.key = childSnapshot.key;
+        players.push(player);
+      });
+
+      this.players = players;
+    });
+  };
 
   firebaseCheckAuth = () => {
     firebaseAuth().onAuthStateChanged(user => {
