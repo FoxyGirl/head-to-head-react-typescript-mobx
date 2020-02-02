@@ -48,6 +48,10 @@ class ViewStore {
     const playerKey = playersRef.push().key;
     playersRef.child(playerKey!).set({ name: playerName });
   };
+
+  updatePlayer = (key: string, name: string) => {
+    playersRef.child(key).set({ name });
+  };
 }
 
 export default ViewStore;

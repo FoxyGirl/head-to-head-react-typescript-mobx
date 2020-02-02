@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { observer, inject } from 'mobx-react';
+import { Player } from '../../models';
 import AddPlayerForm from './forms/AddPlayerForm';
 import PlayerRow from './forms/PlayerRow';
 import ViewStore from '../../stores/ViewStore';
@@ -10,7 +11,7 @@ interface MPProps {
 
 const ManagePlayers = (props: MPProps) => {
   const { viewStore } = props;
-  let players = [];
+  let players: Player[] = [];
   if (viewStore) {
     players = viewStore.players;
   }
@@ -36,12 +37,21 @@ const ManagePlayers = (props: MPProps) => {
                   </tr>
                 </thead>
                 <tbody>
-                  <PlayerRow />
-                  <tr>
-                    <td colSpan={3}>
-                      <p>Create your first player above.</p>
-                    </td>
-                  </tr>
+                  {players.length > 0 ? (
+                    players.map((player, index) => (
+                      <PlayerRow
+                        key={player.key}
+                        index={index}
+                        player={player}
+                      />
+                    ))
+                  ) : (
+                    <tr>
+                      <td colSpan={3}>
+                        <p>Create your first player above.</p>
+                      </td>
+                    </tr>
+                  )}
                 </tbody>
               </table>
             </div>
